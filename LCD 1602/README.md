@@ -1,6 +1,6 @@
 # LCD 1602
 
-**Be forewarned**:  I've mostly stolen this text from random sites instead of typing it myself.
+I've mostly stolen this text from the sites referenced at the end.
 
 Description
 -----------
