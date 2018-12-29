@@ -1,20 +1,21 @@
 # LCD 1602
 
-I've mostly stolen this text from random sites instead of typing it myself.
+I've mostly stolen this text from the sites referenced at the end.
+
+Description
+-----------
 
 The 1602 board has 16 pins and the first one from left to right is the Ground pin. The second pin is the VCC which connects to the 5 volt pin on the Arduino Board. Next is the Vo pin on which we can attach a potentiometer for controlling the contrast of the display.
 
-Next, The RS pin or register select pin is used for selecting whether we will send commands or data to the LCD. For example if the RS pin is set on low state or zero volts, then we are sending commands to the LCD like: set the cursor to a specific location, clear the display, turn off the display and so on. And when RS pin is set on High state or 5 volts we are sending data or characters to the LCD.
+The RS pin or register select pin is used for selecting whether we will send commands or data to the LCD. For example if the RS pin is set on low state or zero volts, then we are sending commands to the LCD like: set the cursor to a specific location, clear the display, turn off the display and so on. And when RS pin is set on High state or 5 volts we are sending data or characters to the LCD.
 
 ![LCD1602 Pinout](https://howtomechatronics.com/wp-content/uploads/2015/07/LCD-Display-Tutorial.png)
 
-Next comes the R / W pin which selects the mode whether we will read or write to the LCD. Here the write mode is obvious and it is used for writing or sending commands and data to the LCD. The read mode is used by the LCD itself when executing the program which we don’t have a need to discuss about it in this tutorial.
+Next comes the R / W pin which selects the mode whether we will read or write to the LCD. Here the write mode is obvious and it is used for writing or sending commands and data to the LCD. The read mode is used by the LCD itself.
 
-Next is the E pin which enables the writing to the registers, or the next 8 data pins from D0 to D7. So through this pins we are sending the 8 bits data when we are writing to the registers or for example if we want to see the latter uppercase A on the display we will send 0100 0001 to the registers according to the ASCII table.
+Next is the E pin which enables the writing to the registers via the next 8 data pins from D0 to D7. For example if we want to see the latter uppercase A on the display we will send 0100 0001 to the registers according to the ASCII table.
 
-And the last two pins A and K, or anode and cathode are for the LED back light.
-
-**We don’t have to worry much about how the LCD works, as the Liquid Crystal Library takes care for almost everything.** From the Arduino’s official website you can find and see the functions of the library which enable easy use of the LCD. We can use the Library in 4 or 8 bit mode. In this tutorial we will use it in 4 bit mode, or we will just use 4 of the 8 data pins.
+And the last two pins A and K (anode and cathode) are for the LED back light.
 
 Lay out the following:
 
@@ -22,7 +23,10 @@ Lay out the following:
 
 The potentiometer that comes with the kit works just fine for this example.
 
-The code to drive the example:
+Sketch
+------
+
+Use this code (or included sketch file)
 
 ```
 #include <LiquidCrystal.h>
@@ -91,7 +95,7 @@ void loop() {
 }
 ```
 
-When its all running you'll see something like this:
+Compile and upload the code to the board and  you'll see something like this:
 
 ![Example](layout.jpg)
 
