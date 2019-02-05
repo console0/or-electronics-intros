@@ -1,6 +1,6 @@
 # Analog Joystick
 
-The included analog joystick is essentailly a Playstation controller stick.  You read the X and Y coordinates via analog, and the button via digital.
+The included analog joystick is essentially a Playstation controller stick.  You read the X and Y coordinates via analog, and the button via digital.
 
 Layout
 ------
